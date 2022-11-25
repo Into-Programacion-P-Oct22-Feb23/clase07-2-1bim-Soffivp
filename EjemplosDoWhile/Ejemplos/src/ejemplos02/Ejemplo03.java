@@ -19,6 +19,7 @@ public class Ejemplo03 {
         entrada.useLocale(Locale.US);
         String cadenaFinal = "";
         double nota;
+        double suma = 0;
         boolean bandera = true;
         int salida;
         
@@ -28,7 +29,7 @@ public class Ejemplo03 {
             
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
                     nota);
-            
+            suma = suma + nota;
             System.out.println("Ingrese (-111) si desea salir del ciclo ");
             salida = entrada.nextInt();
 
@@ -39,6 +40,6 @@ public class Ejemplo03 {
         } while (bandera); // (bandera==true)
         
         cadenaFinal = String.format("%s\n", cadenaFinal);
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        System.out.printf("Listado de Notas\n%s\nLa suma de las notas es:\n%.2f\n", cadenaFinal, suma);
     }
 }
